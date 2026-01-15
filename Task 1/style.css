@@ -1,0 +1,234 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", sans-serif;
+}
+
+body {
+  body {
+  color:#1f2933;
+  background-color:#ffffff;
+  background-image:
+    radial-gradient(circle at 10% 10%,rgba(34,197,94,0.12),transparent 40%),
+    radial-gradient(circle at 90% 20%,rgba(14,165,233,0.12),transparent 45%),
+    radial-gradient(circle at 50% 90%,rgba(34,197,94,0.10),transparent 50%);
+  background-repeat: no-repeat;
+}
+
+}
+
+
+.navbar {
+  display:flex;
+  justify-content:space-between;
+  padding:20px 60px;
+  background:#f1fdf4;
+  animation:slideDown 1s ease;
+}
+
+.navbar a {
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:600;
+  color:#14532d;
+}
+
+
+.Main {
+  display:flex;
+  align-items:center;
+  padding:100px 60px;
+  background:radial-gradient(circle at top left,rgba(22,163,74,0.18),transparent 45%),radial-gradient(circle at bottom right,rgba(14,165,233,0.15),transparent 50%);
+}
+
+.Main-text h1 {
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.Main-text p {
+  font-size:18px;
+  margin-bottom:30px;
+}
+
+.btn-primary {
+  padding:12px 28px;
+  background:#16a34a;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.btn-secondary {
+  padding:12px 28px;
+  background:#15803d;
+  color:white;
+  border:none;
+  border-radius:8px;
+}
+
+
+.features {
+  padding:100px 60px;
+  text-align:center;
+  background-color:#ffffff;
+}
+
+.section-title {
+  font-size:36px;
+}
+
+.feature-grid {
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:40px;
+  margin-top:50px;
+}
+
+.feature-card {
+  background:#f0fdf4;
+  padding:30px;
+  border-radius:16px;
+  transition:transform 0.3s;
+}
+
+.feature-card:hover {
+  transform:translateY(-10px);
+}
+
+.feature-card img {
+  width:70px;
+  margin-bottom:20px;
+}
+
+.platform {
+  display:flex;
+  align-items:center;
+  padding:100px 60px;
+  background:radial-gradient(circle at 20% 50%,rgba(14,165,233,0.10),transparent 50%),#f9fafb;
+}
+
+
+.cta {
+  text-align:center;
+  padding:100px 40px;
+  background-color:#16a34a;
+  color:white;
+}
+
+
+
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px); }
+  to {opacity:1; transform:translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from {opacity:0;transform: translateX(-50px); }
+  to {opacity:1;transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from {opacity:0; transform: translateX(50px); }
+  to {opacity:1; transform: translateX(0); }
+}
+
+@keyframes slideDown {
+  from {opacity:0; transform: translateY(-20px); }
+  to {opacity:1; transform: translateY(0); }
+}
+
+@keyframes floatAnim {
+  0% { transform:translateY(0); }
+  50% { transform:translateY(-10px); }
+  100% { transform:translateY(0); }
+}
+
+@keyframes pulseAnim {
+  0% {transform: scale(1); }
+  50% {transform: scale(1.05); }
+  100% {transform: scale(1); }
+}
+
+
+.fade-in {animation:fadeIn 1.2s ease forwards; }
+.slide-in {animation:slideInRight 1.2s ease forwards; }
+.slide-left {animation:slideInLeft 1.2s ease forwards; }
+.slide-right {animation:slideInRight 1.2s ease forwards; }
+
+.float {
+  animation: floatAnim 3s ease-in-out infinite;
+}
+
+.delay-1 {animation-delay:0.5s; }
+.delay-2 {animation-delay:1s; }
+
+.pulse {
+  animation:pulseAnim 2.5s infinite;
+}
+
+.scroll-fade {
+  opacity:0;
+  transform:translateY(60px);
+  animation:fadeUp linear forwards;
+  animation-timeline:view();
+  animation-range:entry 0% cover 40%;
+}
+
+.scroll-left {
+  opacity: 0;
+  transform: translateX(-80px);
+  animation: slideLeft linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+
+.scroll-right {
+  opacity: 0;
+  transform: translateX(80px);
+  animation: slideRight linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+
+.scroll-zoom {
+  opacity:0;
+  transform:scale(0.8);
+  animation:zoomIn linear forwards;
+  animation-timeline: view();
+  animation-range:entry 0% cover 40%;
+}
+
+
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
