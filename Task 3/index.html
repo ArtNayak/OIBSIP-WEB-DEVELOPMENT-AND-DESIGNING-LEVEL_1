@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+  <h1>Temperature Converter</h1>
+
+  <!-- Temperature Input -->
+  <input
+    type="text"
+    id="temperatureInput"
+    placeholder="Enter temperature"
+  />
+
+  <!-- From Unit -->
+  <select id="fromUnit">
+    <option value="">From Unit</option>
+    <option value="celsius">Celsius (°C)</option>
+    <option value="fahrenheit">Fahrenheit (°F)</option>
+    <option value="kelvin">Kelvin (K)</option>
+  </select>
+
+  <!-- To Unit -->
+  <select id="toUnit">
+    <option value="">To Unit</option>
+    <option value="celsius">Celsius (°C)</option>
+    <option value="fahrenheit">Fahrenheit (°F)</option>
+    <option value="kelvin">Kelvin (K)</option>
+  </select>
+
+  <!-- Convert Button -->
+  <button onclick="convertTemperature()">Convert</button>
+
+  <!-- Result -->
+  <div id="result" class="result">
+    Converted temperature will appear here
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
